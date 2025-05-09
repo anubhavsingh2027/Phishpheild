@@ -1,0 +1,214 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Auth Container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.auth-box {
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Increased width */
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Header */
+h1 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #00ffe7;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 20px;
+    box-shadow: 0 0 12px rgba(0, 255, 231, 0.3);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+input::placeholder {
+    color: #bbb;
+    font-style: italic;
+}
+
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-btn {
+    padding: 14px 25px;
+    font-size: 18px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    width: 100%;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.register-btn {
+    padding: 15px 25px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    width: 100%;
+    font-weight: bold;
+}
+
+.register-btn:hover {
+    background: linear-gradient(135deg, #5a6bc1, #6e7dff);
+    transform: translateY(-3px);
+}
+
+
+.forgot-password {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+.forgot-password:hover {
+    color: #007bff;
+    cursor: pointer;
+}
+
+
+
+.no-account,.already-have-account {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+
+.no-account a,
+.already-have-account a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.no-account a:hover,
+.already-have-account a:hover {
+    text-decoration: underline;
+}
+
+
+.error-message,
+.success-message {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+    color: #f44336;
+}
+
+.success-message {
+    color: #4caf50;
+}
+
+
+input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
+}
+
+/* Button Loading State */
+.login-btn.loading,
+.register-btn.loading {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .auth-box {
+        padding: 35px 25px;
+        width: 90%;
+        max-width: 450px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .login-btn {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .register-btn {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .forgot-password,
+    .no-account,
+    .already-have-account {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style1.css" />
+  <link rel="stylesheet" href="style2.css">
+  
+</head>
+<body>
+  <header class="navbar">
+     <img class="logo" src="image/logo.png" alt="logo">
+   
+    <nav>
+      <a class="nav-content" href="index.html">Home</a>
+      <a class="nav-content"  href="about.html">About</a>
+      <a class="nav-content" href="contact.html">Contact</a>
+      <a id="login-content" href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <div class="auth-container">
+    <div class="auth-box">
+      <!-- Login Form -->
+      <div class="form login-form">
+        <h1>Login</h1>
+        <form>
+          <div class="input-group">
+            <input type="text" id="username" placeholder="Username" required>
+          </div>
+          <div class="input-group">
+            <input type="password" id="password" placeholder="Password" required>
+          </div>
+          <div class="action-buttons">
+            <button type="submit" class="login-btn">Login</button>
+            <p class="forgot-password">Forgot password?</p>
+          </div>
+          <p class="no-account">Don't have an account? <a href="register.html" class="toggle-form">Register</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
