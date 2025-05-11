@@ -60,8 +60,22 @@ app.post('/api/contact', async (req, res) => {
     from: `"PhishShield Team " <${process.env.GMAIL_USER}>`,
     to: email,
     subject: 'Thank you for contacting PhishShield!',
-    text: `Hi ${name},\n\nThank you for contacting us! We have received your message, and our team will contact you very Soon.\n\nHere’s a copy of your message:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}\n\nBest regards,\nPhishShield Team\nDeveloper :Anubhav singh\n\n`,
-  };
+    text:`Hi ${name},
+
+Thank you for your valuable feedback! We have successfully received your message and our team will get back to you shortly.
+
+Here’s a copy of the message you submitted:
+
+Name: ${name}
+Email: ${email}
+Message: ${message}
+
+We appreciate your input—it helps us improve PhishShield to better protect and educate users like you.
+If you need any further assistance, feel free to reach out to us at anubhavsingh2027@gmail.com.
+Best regards,  
+PhishShield Team  
+Developer: Anubhav Singh
+`,};
 
   try {
     await transporter.sendMail(adminMailOptions);
